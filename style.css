@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
 }
 .Calculator{
     background-color: #ecf0f3;
