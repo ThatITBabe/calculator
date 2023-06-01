@@ -14,10 +14,11 @@
     padding: 30px;
 }
 .Calculator{
-    background-color: #ecf0f3;
+    background-color: #000;
+    /* background-color: #ecf0f3; */
     padding: 15px;
     border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
+    box-shadow: inset 5px 5px 12px #000,
                     5px 5px 12px rgba(0, 0, 0, .16);
     display: grid;
     grid-template-columns: repeat(4, 68px);
@@ -26,8 +27,8 @@ input{
     grid-column: span 4;
     height: 70px;
     width: 260px;
-    background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
+    background-color: black;
+    box-shadow: inset -5px -5px 12px #000,
                     5px 5px 12px rgba(0, 0, 0, .16);
     border: none;
     border-radius: 30px;
@@ -38,6 +39,9 @@ input{
     margin-top: 40px;
     margin-bottom: 30px;
     padding: 20px;
+}
+input::placeholder{
+    color: #fff;
 }
 button{
     height: 48px;
@@ -50,57 +54,53 @@ button{
     margin: 8px;
     font-size: 16px;
 }
-.red{
-    background-color: red;
-    box-shadow: inset -5px -5px 12px red,
-                    5px 5px 12px rgba(0, 0, 0, .16)
+.ash{
+    background-color: #9f9f9f;
+    box-shadow: inset -5px -5px 12px #9f9f9f,
+                    5px 5px 12px rgba(0, 0, 0, .16);
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+    
 }
-.red:hover{
-    background: black;
+.ash:hover{
+    background: #313131;
     color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px black,
+    box-shadow: inset -5px -5px 12px #313131,
                     5px 5px 12px rgba(0, 0, 0, .16)
 }
 .yellow{
-    background-color: #f2b705;
+    background-color: #f69a06;
     box-shadow: inset -5px -5px 12px #f2b705,
-                    5px 5px 12px rgba(0, 0, 0, .16)
+                    5px 5px 12px rgba(0, 0, 0, .16);
+                    color: white;
+                    /* font-weight: 800; */
+                    font-size: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 }
 .yellow:hover{
-    background-color: #027368;
-    box-shadow: inset -5px -5px 12px #027368,
-                    5px 5px 12px rgba(0, 0, 0, .16);
-    color: white;
-}
-.green{
-    background-color: #027368;
-    box-shadow: inset -5px -5px 12px #027368,
-                    5px 5px 12px rgba(0, 0, 0, .16)
-}
-/* .green:hover{
     background-color: white;
-    color: #027368;
-    box-shadow: inset -5px -5px 12px white,
-                    5px 5px 12px rgba(0, 0, 0, .16)
-} */
-.green2{
-    background-color: #027368;
-}
-.others:hover{
-    background-color: #b4b2b3;
-    box-shadow: inset -5px -5px 12px #b4b2b3,
+    box-shadow: inset -5px -5px 12px #fff,
                     5px 5px 12px rgba(0, 0, 0, .16);
-    color: white;
+    color: #f69a06;
 }
-/* .green2:hover{
+.gray{
+    background-color: #313131;
+    box-shadow: inset -5px -5px 12px #313131,
+                    5px 5px 12px rgba(0, 0, 0, .16);
+                    color: #fff;
+                    font-size: 30px;
+}
+.gray:hover{
     background-color: white;
-    color: #027368;
-} */
-/* .calculate{
-    width: 115px;
-    border-radius: 40px;
-    background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
+    box-shadow: inset -5px -5px 12px #fff,
                     5px 5px 12px rgba(0, 0, 0, .16);
-     
-} */
+    color: #313131;
+    font-size: 30px;
+}
+
+.small{
+    font-size: 14px;
+}
