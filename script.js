@@ -1,17 +1,6 @@
 let input = document.getElementById("inputBox");
 let buttons = document.querySelectorAll("button")
 let powerSwitch = document.getElementById('powerSwitch');
-let display = document.getElementById('inputBox');
-let isCalculatorOn = false;
-
-function toggleCalculator() {
-    isCalculatorOn = powerSwitch.checked;
-    if (isCalculatorOn) {
-        display.textContent = '0';
-    } else {
-        display.textContent = '';
-    }
-}
 
 let string = ""
 let arr = Array.from(buttons);
@@ -21,14 +10,6 @@ arr.forEach(button => {
             string = eval(string);
             input.value = string;
         }
-        // else if (e.target.innerHTML == 'On/Off') {
-        //     isOn = !isOn; // Toggle the state
-        //     input.disabled = !isOn; // Disable or enable the input based on the state
-        //     if (!isOn) {
-        //       string = "";
-        //       input.value = string;
-        //     }
-        // }
         else if(e.target.innerHTML == 'AC'){
             string = "";
             input.value = string;
