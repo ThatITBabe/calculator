@@ -1,5 +1,17 @@
 let input = document.getElementById("inputBox");
 let buttons = document.querySelectorAll("button")
+let powerSwitch = document.getElementById('powerSwitch');
+let display = document.getElementById('inputBox');
+let isCalculatorOn = false;
+
+function toggleCalculator() {
+    isCalculatorOn = powerSwitch.checked;
+    if (isCalculatorOn) {
+        display.textContent = '0';
+    } else {
+        display.textContent = '';
+    }
+}
 
 let string = ""
 let arr = Array.from(buttons);
@@ -26,15 +38,21 @@ arr.forEach(button => {
             input.value = string
         }
         else if (e.target.innerHTML == 'Sqrt') {
-            var number = parseFloat(string);
-            var result = Math.sqrt(number);
-            input.value = result;
+            string = Math.sqrt(string);
+            input.value = string
         }
         else if (e.target.innerHTML == 'Sq') {
-            var number = parseFloat(string);
-            var result = (number * number);
-            input.value = result;
+            string = string * string
+            input.value = string
         }
+        else if (e.target.innerHTML == '+/-') {
+            if (string.startsWith("-")) {
+              string = string.slice(1); // Remove the negative sign
+            } else {
+              string = "-" + string; // Add the negative sign
+            }
+            input.value = string;
+          }
         else{
             string += e.target.innerHTML;
             input.value = string;
@@ -42,15 +60,3 @@ arr.forEach(button => {
     })
 })
 
-// function square() {
-//     var number = parseFloat(document.getElementById("inputBox").value);
-//     var result = number * number;
-//     document.getElementById("result").innerHTML = "Result: " + result;
-//   }
-
-// function squareRoot() {
-//     var number = parseFloat(document.getElementById("inputBox").value);
-//     var result = Math.sqrt(number);
-//     document.getElementById("result").innerHTML = "Result: " + result;
-//     input.value = string;
-// }
